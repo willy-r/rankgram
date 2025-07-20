@@ -13,7 +13,7 @@
   }
 
   if (!location.href.startsWith("https://www.instagram.com/p/")) {
-    alert("⚠️ Este bookmarklet só funciona em uma publicação do Instagram.");
+    alert("⚠️ This bookmarklet only works on an Instagram post.");
     return;
   }
 
@@ -33,7 +33,7 @@
   overlay.style.fontSize = '20px';
   overlay.style.fontFamily = 'sans-serif';
   overlay.innerHTML = `
-    <div style="margin-bottom: 16px;">⏳ Coletando comentários…</div>
+    <div style="margin-bottom: 16px;">⏳ Collecting comments…</div>
     <div class="spinner" style="width:40px;height:40px;border:5px solid #ccc;border-top-color:#fff;border-radius:50%;animation:spin 1s linear infinite;"></div>
     <style>@keyframes spin{to{transform:rotate(360deg)}}</style>
   `;
@@ -45,7 +45,7 @@
     .find(el => isScrollable(el));
 
   if (!scrollContainer) {
-    alert("❌ Não foi possível localizar o container de comentários. Tente atualizar a página.");
+    alert("❌ The comment container could not be located. Try refreshing the page.");
     document.body.removeChild(overlay);
     document.body.style.overflow = '';
     return;
@@ -105,7 +105,7 @@
 
     console.log('📊 Ranking:');
     result.forEach(line => console.log(line));
-    alert("✅ Ranking finalizado! Veja o console (F12) e baixe o arquivo.");
+    alert("✅ Ranking finalized! View the console (F12) and download the file.");
 
     const blob = new Blob([result.join(' | ')], { type: 'text/plain;charset=utf-8' });
     const link = document.createElement("a");

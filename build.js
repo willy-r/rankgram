@@ -11,19 +11,20 @@ const html = `
 <html lang="pt-BR">
 <head>
   <meta charset="UTF-8">
-  <title>Rankear Comentários do Instagram</title>
+  <title>Rank Instagram Comments</title>
+  <link rel="stylesheet" href="style.min.css">
 </head>
 <body>
-  <h2>Arraste o botão abaixo para sua barra de favoritos:</h2>
+  <h2>Drag the button below to your bookmarks bar:</h2>
 
   <a id="bookmarklet" style="font-size:20px;padding:10px;background:#007aff;color:#fff;text-decoration:none;border-radius:6px;">
     [📊 rankgram 1.0.0]
   </a>
 
-  <p>Depois de arrastar, vá até uma publicação do Instagram, clique no botão e aguarde o ranking ser gerado, dependendo da quantidade de comentários poderá demorar um pouco.</p>
-  <p>O ranking será exibido em um arquivo HTML à parte para melhor visualização, que será baixado após a conclusão do ranqueamento.</p>
+  <p>After dragging, go to an Instagram post, click the button and wait for the ranking to be generated, depending on the number of comments it may take a while.</p>
+  <p>The ranking will be displayed in a separate HTML file for better viewing, which will be downloaded after the ranking is completed.</p>
 
-  <p><strong>Importante:</strong> Este bookmarklet só funciona em publicações do Instagram e para o funcionamento correto do mesmo será necessário estar logado na conta do Instagram.</p>
+  <p><strong>Important:</strong> This bookmarklet only works on Instagram posts and for it to work correctly you will need to be logged into your Instagram account.</p>
 
   <script>
     const bookmarkletCode = \`${code.replace(/`/g, '\\`')}\`;
@@ -34,4 +35,4 @@ const html = `
 `;
 
 fs.writeFileSync(outputPath, html, 'utf8');
-console.log('✅ index.html gerado com sucesso!');
+console.log('✅ index.html generated successfully!');
